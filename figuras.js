@@ -1,20 +1,24 @@
 //Codigo del cuadrado
 console.group("Cuadrados");// Agrupar mensajes en la consola
-const ladoCuadrado = 5;
+//const ladoCuadrado = 5;
 
-console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
+//console.log("Los lados del cuadrado miden: " + ladoCuadrado + "cm");
 
-const perimetroCuadrado = ladoCuadrado * 4;
+function perimetroCuadrado (lado) {
+    return lado * 4;
+}
 
-console.log("El perimetro del cuadrado es: " + perimetroCuadrado + "cm");
+//console.log("El perimetro del cuadrado es: " + perimetroCuadrado + "cm");
 
-const areaCuadrado = ladoCuadrado ** 2;
+function areaCuadrado (lado){
+    return lado ** 2;
+}
 
-console.log("El area del cuadrado es: " + areaCuadrado + "cm^2");
+//console.log("El area del cuadrado es: " + areaCuadrado + "cm^2");
 
 console.groupEnd();//Poner siempre para agrupar los mensajes hasta el groupEnd 
 
-//Codigo del triangulo
+/*Codigo del triangulo
 console.group("Triangulo");
 const ladoTriangulo1 = 6;
 const ladoTriangulo2 = 6;
@@ -38,16 +42,20 @@ console.log(
 
 const alturaTriangulo = 5.5;
 
-console.log("Los altura del triangulo es de: " + alturaTriangulo + "cm");
+console.log("Los altura del triangulo es de: " + alturaTriangulo + "cm");*/
 
-const perimetroTriangulo = ladoTriangulo1 + ladoTriangulo2 + baseTriangulo;
+function perimetroTriangulo(lado1, lado2, base){
+    return lado1 + lado2 + base;
+}
 
-console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm");
+//console.log("El perimetro del triangulo es: " + perimetroTriangulo + "cm");
 
-const areaTriangulo = (baseTriangulo * alturaTriangulo) / 2; //Javascript en las operaciones matematicas siempre ejecuta
+function areaTriangulo (base, altura){
+    return (base * altura)/2;
+} //Javascript en las operaciones matematicas siempre ejecuta
 //lo qe esta dentro del parentesis
 
-console.log("El area del triangulo es: " + areaTriangulo + "cm^2");
+//console.log("El area del triangulo es: " + areaTriangulo + "cm^2");
 
 console.groupEnd();
 
@@ -56,25 +64,34 @@ console.groupEnd();
 console.group("Circulos");
 
 //Radio
-const radioCirculo = 4;
+//const radioCirculo = 4;
 
-console.log("El radio del circulo es de: " + radioCirculo + "cm");
+//console.log("El radio del circulo es de: " + radioCirculo + "cm");
 
 //Diametro
-const diametroCirculo = radioCirculo * 2;
-console.log("El diametro del circulo es de: " + diametroCirculo + "cm");
+function diametroCirculo (radio){
+    return radio * 2;
+} 
+
+//console.log("El diametro del circulo es de: " + diametroCirculo + "cm");
 
 //PI
 const PI =  Math.PI;
-console.log("La constante PI es: " + PI);
+//console.log("La constante PI es: " + PI);
 
 //Circunferencia
-const perimetroCirculo = diametroCirculo * PI;
-console.log("El perimetro del circulo es de: " + perimetroCirculo + "cm");
+function perimetroCirculo(radio){
+    const diametro = diametroCirculo(radio);
+    return diametro * PI;
+} 
+
+//console.log("El perimetro del circulo es de: " + perimetroCirculo + "cm");
 
 //Area
-const areaCirculo = PI * (radioCirculo ** 2);
+function areaCirculo(radio){
+    return (radio ** 2) * PI;
+}
 
-console.log("El area del circulo es de: " + areaCirculo + "cm^2");
+//console.log("El area del circulo es de: " + areaCirculo + "cm^2");
 
 console.groupEnd();
