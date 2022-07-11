@@ -6,7 +6,7 @@ const alturaIsosceles = (lado1, lado2, lado3) => {
     } else if (lado2 === lado3){
         return Math.sqrt((lado2 ** 2) - (lado1 ** 2)/4 );
     }else{
-        alert("El triangulo no es isosceles. Inserte nuevas medidas");
+        return ("El triangulo no es isosceles. Inserte nuevas medidas");
     }
 }
 
@@ -20,5 +20,5 @@ const calcularAlturaIsosceles = () => {
     const lado3 = document.getElementById("InputLado3");
     const value3 = lado3.value;
     const altura = alturaIsosceles(value1, value2, value3);
-    alert(`La altura es ${altura}`);
+    alert(altura);
 }
