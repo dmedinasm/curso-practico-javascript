@@ -17,19 +17,25 @@ const resultadosAsignaturas = [
 
 ]
 
+const calcularMediaPonderada = (lista) => {
 const suma = (a, b) => a + b 
 
 const multMediaCredito =
-    resultadosAsignaturas.map(
+    lista.map(
     function(elemento){
         return elemento.nota * elemento.credito;
     }
 )
 
-const creditos = resultadosAsignaturas.map(
+const creditos = lista.map(
     function(elemento){
         return elemento.credito
     }
 )
 
 const mediaPonderada = (multMediaCredito.reduce(suma))/(creditos.reduce(suma));
+
+return mediaPonderada
+}
+
+console.log(calcularMediaPonderada(resultadosAsignaturas));
