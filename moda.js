@@ -22,3 +22,10 @@ const moda = listaArray[listaArray.length - 1];
 return moda;
 }
 
+
+const calcularModaInput = () =>{
+  const input = document.getElementById("inputDatos");
+  const value = JSON.parse ("[" + input.value + "]");// JSON.parse: Convierte cadena de numeros separados por coma en un array
+  const calculoModa = calcularModa(value);
+  alert(`Moda, Cantidad de Repeticiones: ${calculoModa}`);
+}
