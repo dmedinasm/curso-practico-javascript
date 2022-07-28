@@ -9,7 +9,7 @@ const salarioColSorted = salariosCol.sort(
         return salaryA - salaryB
     }
 );
-console.log(salarioColSorted);
+
 const calcularMediaAritmetica = (lista) => {
     const sumaLista = lista.reduce(
         function(valorAcumulado = 0, nuevoElemento){
